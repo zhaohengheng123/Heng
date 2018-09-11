@@ -1,0 +1,8 @@
+E:\2018\MH\MH\MH\bin\Debug\MH.exe.config
+E:\2018\MH\MH\MH\bin\Debug\MH.exe
+E:\2018\MH\MH\MH\bin\Debug\MH.pdb
+E:\2018\MH\MH\MH\obj\Debug\MH.Form1.resources
+E:\2018\MH\MH\MH\obj\Debug\MH.Properties.Resources.resources
+E:\2018\MH\MH\MH\obj\Debug\MH.csproj.GenerateResource.Cache
+E:\2018\MH\MH\MH\obj\Debug\MH.exe
+E:\2018\MH\MH\MH\obj\Debug\MH.pdb

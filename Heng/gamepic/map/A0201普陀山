@@ -1,0 +1,19 @@
+{
+    "CityCode": "A0201",
+    "CityName": "普陀山",
+    "Entrance": [
+        {
+            "CityCode": "A01",
+            "CityName": "大唐国境",
+            "Condition": "{x}<80&&{y}>210",
+            "PutPosition": "221,62",
+            "Type": "Click",
+            "XRange": "216-228",
+            "YRange": "57-68",
+            "until": "dialog|126(6),205"
+        }
+    ],
+    "MapSize": "370,275",
+    "MaxX": "95",
+    "MaxY": "71"
+}

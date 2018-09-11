@@ -1,0 +1,8 @@
+E:\2018\MH\Heng\demo\C#\KeyTest\bin\Debug\KeyDemo.exe
+E:\2018\MH\Heng\demo\C#\KeyTest\bin\Debug\KeyDemo.pdb
+E:\2018\MH\Heng\demo\C#\KeyTest\obj\Debug\KeyDemo.csprojResolveAssemblyReference.cache
+E:\2018\MH\Heng\demo\C#\KeyTest\obj\Debug\KeyDemo.frmMain.resources
+E:\2018\MH\Heng\demo\C#\KeyTest\obj\Debug\KeyDemo.Properties.Resources.resources
+E:\2018\MH\Heng\demo\C#\KeyTest\obj\Debug\KeyDemo.csproj.GenerateResource.Cache
+E:\2018\MH\Heng\demo\C#\KeyTest\obj\Debug\KeyDemo.exe
+E:\2018\MH\Heng\demo\C#\KeyTest\obj\Debug\KeyDemo.pdb

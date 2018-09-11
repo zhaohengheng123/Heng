@@ -1,0 +1,248 @@
+1.检测设备是否存在
+  function GetKeyDev(): Integer; stdcall; external 'KeyCall.dll' name 'GetKeyDev';
+  返回: 1.设备存在
+        0.设备不存在
+
+2.发送字符串(自动区分大小写，可用于输入密码等)
+  function KeySendChar(const AData: PChar): Integer;stdcall;external 'KeyCall.dll' name 'KeySendChar';
+  说明：
+    KeySendChar（"1234567890"）；
+  注：AData支持字符有：  ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyx1234567890~!@#$%^&*()_+:"|<>?,./;'\[]`-=
+      还有0x0D: Enter  0x09:Tab
+  返回: 0.成功
+        -1.设备不存在
+
+3.鼠标按下
+  function MouseDown(const AKey: Byte): Integer;stdcall;external 'KeyCall.dll' name 'MouseDown';
+  说明：
+    MouseDown(1); //按下左键
+    MouseDown(2); //按下右键
+    MouseDown(4); //按下中键
+    MouseDown(0); //放开按键
+  返回: 0.成功
+        -1.设备不存在
+
+4.鼠标移动(相对坐标)
+  function MouseMove(const AKey: Byte; X, Y: Integer): Integer;stdcall;external 'KeyCall.dll' name 'MouseMove';
+    MouseMove(1,0,20); //左键拖动鼠标向下20个点
+    MouseMove(0,-20,0);//鼠标左移20个点
+    MouseMove(0,20,20);//鼠标向左下各移动20个点
+  返回: 0.成功
+        -1.设备不存在
+
+5.鼠标移动（绝对坐标）
+  function MouseMoveTo(const AKey: Byte; X, Y: Integer): Integer;stdcall;external 'KeyCall.dll' name 'MouseMove';
+    MouseMoveTo(1,20,30);	//按住鼠标左键从当前位置拖动鼠标至x:20,y:30位置
+    MouseMoveTo(0,20,30);	//鼠标移去至x:20,y:30位置
+  返回: 0.成功
+        -1.设备不存在
+
+6.鼠标快速移动（绝对坐标）
+  function MouseMoveToEx(const AKey: Byte; X, Y: Integer): Integer;stdcall;external 'KeyCall.dll' name 'MouseMove';
+    MouseMoveToEx(1,20,30);	//按住鼠标左键从当前位置拖动鼠标至x:20,y:30位置
+    MouseMoveToEx(0,20,30);	//鼠标移去至x:20,y:30位置
+  返回: 0.成功
+        -1.设备不存在
+  注意：该函数使用的移动非硬件完成，但操作响应速度比较快！
+
+7.鼠标单击
+  function MouseClick(const AKey: Byte): Integer;stdcall;external 'KeyCall.dll' name 'MouseClick';
+  示例：
+    MouseClick(1); //单击左键
+    MouseClick(2); //单击右键
+    MouseClick(4); //单击中键
+  返回: 0.成功
+        -1.设备不存在
+
+8.鼠标双击
+  function MouseDbClick(const AKey: Byte): Integer;stdcall;external 'KeyCall.dll' name 'MouseDbClick';
+  示例：
+    MouseDbClick(1); //双击左键
+    MouseDbClick(2); //双击右键
+    MouseDbClick(4); //双击中键
+  返回: 0.成功
+        -1.设备不存在
+
+9.鼠标中键滚动
+  function MouseRoll(const AKey, ARoll: Byte): Integer;stdcall;external 'KeyCall.dll' name 'MouseRoll';
+  示例：
+    MouseRoll(0,1);   //鼠标向上滚动1格
+    MouseRoll(0,5);   //鼠标向上滚动5格
+    MouseRoll(0,255); //鼠标向下滚动1格
+    MouseRoll(0,251); //鼠标向下滚动5格
+    MouseRoll(1,1);   //按住左键并且鼠标向上滚动1格
+  返回: 0.成功
+        -1.设备不存在
+
+10.键盘按下
+  function KeyDown(const KeyCtrl: Byte; const AData: PChar): Integer;stdcall;external 'KeyCall.dll' name 'KeyDown';
+  示例：
+    KeyDown(1, #$01e); //按住Ctrl+1
+    KeyDown(4, #$01e); //按住Alt+1
+    KeyDown(2, #$01e); //按住Shift+1
+    KeyDown(8, #$01e); //按住Win+1
+    KeyDown(1, #$01e#$01f); //按住Ctrl+1+2
+    KeyDown(0, #$00);  //放开所有按键
+  注：AData最多支持同时按下6键(Ctrl、Alt、Shift、Win除外)；符号定义请参考设备键值表
+  返回: 0.成功
+        -1.设备不存在
+  示例:
+    如果要模拟手动按下Ctrl+A、B效果那调用如下：
+    KeyDown(1, #$00); //按住Ctrl
+    KeyDown(1, #$04); //按住Ctrl+a
+    KeyDown(1, #$00); //按住Ctrl(当前没按a键，即表示放开a键了)
+    KeyDown(1, #$05); //按住Ctrl+b
+    KeyDown(1, #$00); //按住Ctrl(当前没按b键，即表示放开b键了)
+    KeyDown(0, #$00); //放开所有按键(当前没按Ctrl键，即表示放开Ctrl键了)
+
+11.键盘按下(扩展系统标准键值、仅键盘)
+  function KeyDownEx(const AData: PChar): Integer;stdcall; external 'KeyCall.dll' name 'KeyDownEx';
+  示例：
+    KeyDownEx(#162"1");	//按住Ctrl+1
+    KeyDownEx("1"); 	//按住1
+    KeyDownEx("112");	//同时按住1、2、3
+  返回: 0.成功
+        -1.设备不存在
+  注：AData最多支持同时按6普通键(Ctrl、Alt、Shift、Win、鼠标键除外)；符号定义请参考系统键值表
+
+
+12.键盘按下(扩展系统标准键值、含鼠标)
+  function MouseKeyDownEx(const AData: PChar): Integer;stdcall; external 'KeyCall.dll' name 'MouseKeyDownEx';
+  示例：
+    MouseKeyDownEx(#162"1");	//按住Ctrl+1
+    MouseKeyDownEx("1"); 	//按住1
+    MouseKeyDownEx("112");	//同时按住1、2、3
+  返回: 0.成功
+        -1.设备不存在
+  注：AData最多支持同时按6普通键(Ctrl、Alt、Shift、Win、鼠标键除外)；符号定义请参考系统键值表
+
+13.键盘放开
+  function KeyUp(): Integer;stdcall;external 'KeyCall.dll' name 'KeyUp';
+  示例：
+    KeyUp(); 		//放开所有已按下按键
+  返回: 0.成功
+        -1.设备不存在
+
+14.键盘按下并放开
+  function KeyDownUp(const KeyCtrl: Byte; const AData: PChar): Integer;stdcall;external 'KeyCall.dll' name 'KeyDownUp';
+  示例：
+    KeyDownUp(0, #$01e); //按1
+    KeyDownUp(1, #$01e); //按Ctrl+1
+    KeyDownUp(4, #$01e); //按Alt+1
+    KeyDownUp(2, #$01e); //按Shift+1
+    KeyDownUp(8, #$01e); //按Win+1
+    KeyDownUp(1, #$01e#$01f); //按Ctrl+1+2
+  注：AData最多支持同时按6键(Ctrl、Alt、Shift、Win除外)；符号定义请参考设备键值表
+  返回: 0.成功
+        -1.设备不存在
+
+15.键盘按下并放开(扩展系统标准键值、仅键盘)
+  function KeyDownUpEx(const AData: PChar): Integer;stdcall; external 'KeyCall.dll' name 'KeyDownUpEx';
+  示例：
+    KeyDownEx(1, #162"1");		//按Ctrl+1
+    KeyDownEx(1, "1");			//按1
+    KeyDownEx(1, "123");		//同时按123后同时放开
+  返回: 0.成功
+        -1.设备不存在
+  注：AData最多支持同时按6普通键(Ctrl、Alt、Shift、Win、鼠标键除外)；符号定义请参考系统键值表
+
+16.键盘按下并放开(扩展系统标准键值、含鼠标)
+  function MouseKeyDownUpEx(const AData: PChar): Integer;stdcall; external 'KeyCall.dll' name 'MouseKeyDownUpEx';
+  示例：
+    MouseKeyDownUpEx(1, #162"1");	//按Ctrl+1
+    MouseKeyDownUpEx(1, "1"); 		//按1
+    MouseKeyDownUpEx(1, "123");		//同时按123后同时放开
+  返回: 0.成功
+        -1.设备不存在
+  注：AData最多支持同时按6普通键(Ctrl、Alt、Shift、Win、鼠标键除外)；符号定义请参考系统键值表
+
+17.配置动态库内部延时函数
+  procedure SetWaitTick(const AWaitTick, AMoveValue, AClickTick, AInputTick: Integer);
+    AWaitTick:  鼠标移动操作延时(设置值>=10，默认10mS)
+    AMoveValue: 鼠标移动步长(设置值>=1，且设置值<=127，默认127点)
+    AClickTick: 鼠标点击操作延时(设置值>=10，默认20mS)
+    AInputTick：字符串输入KeySendChar函数操作延时(设置值>=10，默认30mS)
+
+
+说明：KeyDownEx、KeyDownUpEx函数支持以下键值，需所需键值不在该范围内，则请采用KeyDown函数设备设备键值集
+      VK_LBUTTON:
+      VK_RBUTTON:
+      VK_CANCEL:
+      VK_MBUTTON:
+      VK_BACK:
+      VK_TAB:
+      VK_RETURN:
+      VK_SHIFT:
+      VK_CONTROL:
+      VK_MENU:
+      VK_PAUSE:
+      VK_CAPITAL:
+      VK_ESCAPE:
+      VK_SPACE:
+      VK_PRIOR:
+      VK_NEXT:
+      VK_END:
+      VK_HOME:
+      VK_LEFT:
+      VK_UP:
+      VK_RIGHT:
+      VK_DOWN:
+      VK_SELECT:
+      VK_EXECUTE:
+      VK_SNAPSHOT:
+      VK_INSERT:
+      VK_DELETE:
+      VK_HELP:
+      VK_LWIN:
+      VK_RWIN:
+      VK_NUMPAD0:
+      VK_NUMPAD1,
+      VK_NUMPAD2,
+      VK_NUMPAD3,
+      VK_NUMPAD4,
+      VK_NUMPAD5,
+      VK_NUMPAD6,
+      VK_NUMPAD7,
+      VK_NUMPAD8,
+      VK_NUMPAD9:
+      VK_MULTIPLY:
+      VK_ADD:
+      VK_SEPARATOR:
+      VK_SUBTRACT:
+      VK_DECIMAL:
+      VK_DIVIDE:
+      VK_F1,
+      VK_F2,
+      VK_F3,
+      VK_F4,
+      VK_F5,
+      VK_F6,
+      VK_F7,
+      VK_F8,
+      VK_F9,
+      VK_F10,
+      VK_F11,
+      VK_F12:
+      VK_F13,
+      VK_F14,
+      VK_F15,
+      VK_F16,
+      VK_F17,
+      VK_F18,
+      VK_F19,
+      VK_F20,
+      VK_F21,
+      VK_F22,
+      VK_F23,
+      VK_F24:
+      VK_NUMLOCK:
+      VK_SCROLL:
+      VK_LSHIFT:
+      VK_RSHIFT:
+      VK_LCONTROL:
+      VK_RCONTROL:
+      VK_RMENU:
+      VK_CRSEL:
+      VK_EXSEL:
+      VK_0..VK_9
+      VK_A..VK_Z

@@ -1,0 +1,12 @@
+E:\2018\MH\Heng\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+E:\2018\MH\Heng\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+E:\2018\MH\Heng\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+E:\2018\MH\Heng\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+E:\2018\MH\Heng\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+E:\2018\MH\Heng\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+E:\2018\MH\Heng\ConsoleApp1\bin\Debug\Heng.Bizlogic.dll
+E:\2018\MH\Heng\ConsoleApp1\bin\Debug\log4net.dll
+E:\2018\MH\Heng\ConsoleApp1\bin\Debug\Newtonsoft.Json.dll
+E:\2018\MH\Heng\ConsoleApp1\bin\Debug\AipSdk.dll
+E:\2018\MH\Heng\ConsoleApp1\bin\Debug\Heng.Bizlogic.pdb
+E:\2018\MH\Heng\ConsoleApp1\bin\Debug\AipSdk.pdb

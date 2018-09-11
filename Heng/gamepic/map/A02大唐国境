@@ -1,0 +1,27 @@
+{
+    "CityCode": "A02",
+    "CityName": "大唐国境",
+    "Entrance": [
+        {
+            "CityCode": "A",
+            "CityName": "长安城",
+            "Condition": "{x}>80||{y}<210",
+            "PutPosition": "80(15),80(15)",
+            "XRange": "5-15",
+            "YRange": "2-10"
+        },
+        {
+            "CityCode": "A",
+            "CityName": "长安城",
+            "Condition": "{x}<80&&{y}>210",
+            "PutPosition": "263,316|347,320|261,354|267,358|342,351|428,317",
+            "Type": "Hover",
+            "XRange": "278-283",
+            "YRange": "39-41",
+            "until": "takeRed|122(20),205"
+        }
+    ],
+    "MapSize": "293,279",
+    "MaxX": "350",
+    "MaxY": "334"
+}

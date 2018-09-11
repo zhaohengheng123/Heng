@@ -1,0 +1,224 @@
+设备键值列表
+10进制 16进制 键值
+0 00 Reserved (no event indicated)9 N/A      
+1 01 Keyboard ErrorRollOver9 N/A      
+2 02 Keyboard POSTFail9 N/A      
+3 03 Keyboard ErrorUndefined9 N/A      
+4 04 Keyboard a and A4 31      
+5 05 Keyboard b and B 50      
+6 06 Keyboard c and C4 48      
+7 07 Keyboard d and D 33      
+8 08 Keyboard e and E 19      
+9 09 Keyboard f and F 34      
+10 0A Keyboard g and G 35      
+11 0B Keyboard h and H 36      
+12 0C Keyboard i and I 24      
+13 0D Keyboard j and J 37      
+14 0E Keyboard k and K 38      
+15 0F Keyboard l and L 39      
+16 10 Keyboard m and M4 52      
+17 11 Keyboard n and N 51      
+18 12 Keyboard o and O4 25      
+19 13 Keyboard p and P4 26      
+20 14 Keyboard q and Q4 17      
+21 15 Keyboard r and R 20      
+22 16 Keyboard s and S4 32      
+23 17 Keyboard t and T 21      
+24 18 Keyboard u and U 23      
+25 19 Keyboard v and V 49      
+26 1A Keyboard w and W4 18      
+27 1B Keyboard x and X4 47      
+28 1C Keyboard y and Y4 22      
+29 1D Keyboard z and Z4 46      
+30 1E Keyboard 1 and !4 2      
+31 1F Keyboard 2 and @4 3      
+32 20 Keyboard 3 and #4 4      
+33 21 Keyboard 4 and $4 5      
+34 22 Keyboard 5 and %4 6      
+35 23 Keyboard 6 and ^4 7      
+36 24 Keyboard 7 and &4 8      
+37 25 Keyboard 8 and *4 9      
+38 26 Keyboard 9 and (4 10      
+39 27 Keyboard 0 and )4 11      
+40 28 Keyboard Return (ENTER)5 43      
+41 29 Keyboard ESCAPE 110      
+42 2A Keyboard DELETE (Backspace)13 15      
+43 2B Keyboard Tab 16      
+44 2C Keyboard Spacebar 61      
+45 2D Keyboard - and (underscore)4 12      
+46 2E Keyboard = and +4 13      
+47 2F Keyboard [ and {4 27      
+48 30 Keyboard ] and }4 28      
+49 31 Keyboard \ and | 29      
+50 32 Keyboard Non-US # and ~2 42      
+51 33 Keyboard ; and :4 40      
+52 34 Keyboard ‘ and “4 41      
+53 35 Keyboard Grave Accent and Tilde4 1      
+54 36 Keyboard, and <4 53      
+55 37 Keyboard . and >4 54      
+56 38 Keyboard / and ?4 55      
+57 39 Keyboard Caps Lock11 30      
+58 3A Keyboard F1 112      
+59 3B Keyboard F2 113      
+60 3C Keyboard F3 114      
+61 3D Keyboard F4 115      
+62 3E Keyboard F5 116      
+63 3F Keyboard F6 117      
+64 40 Keyboard F7 118      
+65 41 Keyboard F8 119      
+66 42 Keyboard F9 120      
+67 43 Keyboard F10 121      
+68 44 Keyboard F11 122      
+69 45 Keyboard F12 123      
+70 46 Keyboard PrintScreen1 124      
+71 47 Keyboard Scroll Lock11 125      
+72 48 Keyboard Pause1 126      
+73 49 Keyboard Insert1 75      
+74 4A Keyboard Home1 80      
+75 4B Keyboard PageUp1 85      
+76 4C Keyboard Delete Forward1;14 76      
+77 4D Keyboard End1 81      
+78 4E Keyboard PageDown1 86      
+79 4F Keyboard RightArrow1 89      
+80 50 Keyboard LeftArrow1 79      
+81 51 Keyboard DownArrow1 84      
+82 52 Keyboard UpArrow1 83      
+83 53 Keypad Num Lock and Clear11 90      
+84 54 Keypad /1 95      
+85 55 Keypad * 100      
+86 56 Keypad - 105      
+87 57 Keypad + 106      
+88 58 Keypad ENTER5 108      
+89 59 Keypad 1 and End 93      
+90 5A Keypad 2 and Down Arrow 98      
+91 5B Keypad 3 and PageDn 103      
+92 5C Keypad 4 and Left Arrow 92      
+93 5D Keypad 5 97      
+94 5E Keypad 6 and Right Arrow 102      
+95 5F Keypad 7 and Home 91      
+96 60 Keypad 8 and Up Arrow 96      
+97 61 Keypad 9 and PageUp 101      
+98 62 Keypad 0 and Insert 99      
+99 63 Keypad . and Delete 104      
+100 64 Keyboard Non-US \ and |3;6 45      
+101 65 Keyboard Application10 129 
+102 66 Keyboard Power9 
+103 67 Keypad = √
+104 68 Keyboard F13 
+105 69 Keyboard F14 
+106 6A Keyboard F15 
+107 6B Keyboard F16
+108 6C Keyboard F17
+109 6D Keyboard F18
+110 6E Keyboard F19
+111 6F Keyboard F20
+112 70 Keyboard F21
+113 71 Keyboard F22
+114 72 Keyboard F23
+115 73 Keyboard F24
+116 74 Keyboard Execute √
+117 75 Keyboard Help √
+118 76 Keyboard Menu √
+119 77 Keyboard Select √
+120 78 Keyboard Stop √
+121 79 Keyboard Again √
+122 7A Keyboard Undo √
+123 7B Keyboard Cut √
+124 7C Keyboard Copy √
+125 7D Keyboard Paste √
+126 7E Keyboard Find √
+127 7F Keyboard Mute √
+128 80 Keyboard Volume Up √
+129 81 Keyboard Volume Down √
+130 82 Keyboard Locking Caps Lock12 √
+131 83 Keyboard Locking Num Lock12 √
+132 84 Keyboard Locking Scroll Lock12 √
+133 85 Keypad Comma27 107
+134 86 Keypad Equal Sign29
+135 87 Keyboard International115,28 56
+136 88 Keyboard International216
+137 89 Keyboard International317
+138 8A Keyboard International418
+139 8B Keyboard International519
+140 8C Keyboard International620
+141 8D Keyboard International721
+142 8E Keyboard International822
+143 8F Keyboard International922
+144 90 Keyboard LANG125
+145 91 Keyboard LANG226
+146 92 Keyboard LANG330
+147 93 Keyboard LANG431
+148 94 Keyboard LANG532
+149 95 Keyboard LANG68
+150 96 Keyboard LANG78
+151 97 Keyboard LANG88
+152 98 Keyboard LANG98
+153 99 Keyboard Alternate Erase7
+154 9A Keyboard SysReq/Attention1
+155 9B Keyboard Cancel
+156 9C Keyboard Clear
+157 9D Keyboard Prior
+158 9E Keyboard Return
+159 9F Keyboard Separator
+160 A0 Keyboard Out
+161 A1 Keyboard Oper
+162 A2 Keyboard Clear/Again
+163 A3 Keyboard CrSel/Props
+164 A4 Keyboard ExSel
+165-175 A5-CF Reserved
+176 B0 Keypad 00
+177 B1 Keypad 000
+178 B2 Thousands Separator 33
+179 B3 Decimal Separator 33
+180 B4 Currency Unit 34
+181 B5 Currency Sub-unit 34
+182 B6 Keypad (
+183 B7 Keypad )
+184 B8 Keypad {
+185 B9 Keypad }
+186 BA Keypad Tab
+187 BB Keypad Backspace
+188 BC Keypad A
+189 BD Keypad B
+190 BE Keypad C
+191 BF Keypad D
+192 C0 Keypad E
+193 C1 Keypad F
+194 C2 Keypad XOR
+195 C3 Keypad ^
+196 C4 Keypad %
+197 C5 Keypad <
+198 C6 Keypad >
+199 C7 Keypad &
+200 C8 Keypad &&
+201 C9 Keypad |
+202 CA Keypad ||
+203 CB Keypad :
+204 CC Keypad #
+205 CD Keypad Space
+206 CE Keypad @
+207 CF Keypad !
+208 D0 Keypad Memory Store
+209 D1 Keypad Memory Recall
+210 D2 Keypad Memory Clear
+211 D3 Keypad Memory Add
+212 D4 Keypad Memory Subtract
+213 D5 Keypad Memory Multiply
+214 D6 Keypad Memory Divide
+215 D7 Keypad +/-
+216 D8 Keypad Clear
+217 D9 Keypad Clear Entry
+218 DA Keypad Binary
+219 DB Keypad Octal
+220 DC Keypad Decimal
+221 DD Keypad Hexadecimal
+222-223 DE-DF Reserved
+224 E0 Keyboard LeftControl 58      
+225 E1 Keyboard LeftShift 44      
+226 E2 Keyboard LeftAlt 60      
+227 E3 Keyboard Left GUI10;23 127     104
+228 E4 Keyboard RightControl 64      
+229 E5 Keyboard RightShift 57      
+230 E6 Keyboard RightAlt 62      
+231 E7 Keyboard Right GUI10;24 128     104
+

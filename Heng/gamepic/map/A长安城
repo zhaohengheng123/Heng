@@ -1,0 +1,23 @@
+{
+    "CityCode": "A",
+    "CityName": "长安城",
+    "Entrance": [
+        {
+            "CityCode": "A01",
+            "CityName": "江南野外",
+            "PutPosition": "230(40),425(10)",
+            "XRange": "13-27",
+            "YRange": "108-113"
+        },
+        {
+            "CityCode": "A02",
+            "CityName": "大唐国境",
+            "PutPosition": "600(50),338(50)",
+            "XRange": "325-349",
+            "YRange": "148-160"		
+        }
+    ],
+    "MapSize": "578,278",
+    "MaxX": "578",
+    "MaxY": "278"
+}

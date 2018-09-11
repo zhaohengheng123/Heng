@@ -1,0 +1,5 @@
+E:\文件夹\C#Key\KeyTest\bin\x86\Release\KeyDemo.exe
+E:\文件夹\C#Key\KeyTest\obj\x86\Release\KeyDemo.frmMain.resources
+E:\文件夹\C#Key\KeyTest\obj\x86\Release\KeyDemo.Properties.Resources.resources
+E:\文件夹\C#Key\KeyTest\obj\x86\Release\KeyDemo.csproj.GenerateResource.Cache
+E:\文件夹\C#Key\KeyTest\obj\x86\Release\KeyDemo.exe

@@ -1,0 +1,22 @@
+LIBRARY     KEYCALL.DLL
+
+EXPORTS
+    GetKeyDev@0                    @1   ; GetKeyDev
+    KeyDown@8                      @7   ; KeyDown
+    KeyDownEx@4                    @6   ; KeyDownEx
+    KeyDownUp@0                    @4   ; KeyDownUp
+    KeyDownUpEx@4                  @3   ; KeyDownUpEx
+    KeySendChar@4                  @2   ; KeySendChar
+    KeyUp@0                        @5   ; KeyUp
+    KeybdEvent@16                  @17  ; KeybdEvent
+    MouseClick@4                   @11  ; MouseClick
+    MouseDbClick@4                 @10  ; MouseDbClick
+    MouseDown@4                    @15  ; MouseDown
+    MouseEvent@20                  @16  ; MouseEvent
+    MouseKeyDownEx@4               @9   ; MouseKeyDownEx
+    MouseKeyDownUpEx@4             @8   ; MouseKeyDownUpEx
+    MouseMove@12                   @14  ; MouseMove
+    MouseMoveTo@12                 @13  ; MouseMoveTo
+    MouseMoveToEx@12               @12  ; MouseMoveToEx
+    MouseRoll@8                    @19  ; MouseRoll
+    WaitDelay@4                    @20  ; WaitDelay

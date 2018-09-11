@@ -1,0 +1,9 @@
+E:\2018\MH\Heng\Heng.Bizlogic\bin\Debug\Heng.Bizlogic.dll
+E:\2018\MH\Heng\Heng.Bizlogic\bin\Debug\Heng.Bizlogic.pdb
+E:\2018\MH\Heng\Heng.Bizlogic\obj\Debug\Heng.Bizlogic.dll
+E:\2018\MH\Heng\Heng.Bizlogic\obj\Debug\Heng.Bizlogic.pdb
+E:\2018\MH\Heng\Heng.Bizlogic\bin\Debug\log4net.dll
+E:\2018\MH\Heng\Heng.Bizlogic\bin\Debug\AipSdk.dll
+E:\2018\MH\Heng\Heng.Bizlogic\bin\Debug\Newtonsoft.Json.dll
+E:\2018\MH\Heng\Heng.Bizlogic\bin\Debug\AipSdk.pdb
+E:\2018\MH\Heng\Heng.Bizlogic\obj\Debug\Heng.Bizlogic.csprojResolveAssemblyReference.cache

@@ -1,0 +1,28 @@
+系统函数模式
+procedure KeybdEvent(bVk: Byte; bScan: Byte; dwFlags, dwExtraInfo: DWORD); stdcall;external 'KeyCall.dll' name 'KeybdEvent';
+procedure MouseEvent(dwFlags, dx, dy, dwData, dwExtraInfo: DWORD); stdcall;external 'KeyCall.dll' name 'MouseEvent';
+
+1.按A键
+  keybdevent(115,0,0,0);
+  keybdevent(115,0,KEYEVENTF_KEYUP,0);
+
+2.按ALT+F4
+  keybdevent(18,0,0,0);
+  keybdevent(115,0,0,0);
+  keybdevent(115,0,KEYEVENTF_KEYUP,0);
+  keybdevent(18,0,KEYEVENTF_KEYUP,0);
+
+3.单击
+  mouseevent (MOUSEEVENTF_LEFTDOWN or MOUSEEVENTF_LEFTUP, 0, 0, 0, 0 );
+
+4.右击
+  mouseevent (MOUSEEVENTF_RIGHTDOWN or MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0 );
+
+5.双击
+  mouseevent (MOUSEEVENTF_LEFTDOWN or MOUSEEVENTF_LEFTUP, 0, 0, 0, 0 );
+
+6.绝对坐标
+  mouseevent (MOUSEEVENTF_ABSOLUTE or MOUSEEVENTF_MOVE, 500 * 65536 div 1024, 500 * 65536 div 768, 0, 0);
+
+7.相对坐标
+  mouseevent (MOUSEEVENTF_MOVE, 50, 50, 0, 0);
